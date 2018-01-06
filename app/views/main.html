@@ -1,0 +1,19 @@
+<table class="table">
+  <caption>Leaderboard</caption>
+  <thead class="thead-dark">
+    <tr>
+      <th class="text-center" scope="col">#</th>
+      <th scope="col">Camper Name</th>
+      <th class="text-center" scope="col" ng-click="board.sortByRecentBrownie()">Point in past 30 days</th>
+      <th class="text-center" scope="col" ng-click="board.sortByAllTimeBrownie()">All time points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="camper in board.data" class="camper">
+      <td class="text-center" scope="row">{{$index+1}}</td>
+      <td><img class="camper__avatar" ng-src="{{camper.img}}" alt="{{camper.username}}">{{camper.username}}</td>
+      <td class="text-center">{{camper.recent}}</td>
+      <td class="text-center">{{camper.alltime}}</td>
+    </tr>
+  </tbody>
+</table>
